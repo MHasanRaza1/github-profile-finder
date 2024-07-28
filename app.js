@@ -15,6 +15,9 @@ let inputError = document.querySelector('.input-error');
 function getData(){
     if(search.value.trim() !== ''){
         inputError.innerHTML = ''; // Clear any previous error messages
+        userDetails.classList.remove('active');
+        notFound.classList.remove('active');
+        found.classList.remove('active');
         inputError.innerHTML = `<p id='loading'>Loading...</p>`;
         let loading = document.getElementById('loading').style.color = 'blue';
         fetchData()
